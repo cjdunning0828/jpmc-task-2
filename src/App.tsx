@@ -55,7 +55,7 @@ class App extends Component<{}, IState> {
       }, 100);
     }
    
-    DataStreamer.getData((serverResponds: ServerRespond[]) => {
+    <DataStreamer className="getData"></DataStreamer>(serverResponds: ServerRespond[]): void => {
       // Update the state by creating a new array of data that consists of
       // Previous data in the state and the new data from server
       this.setState({ data: [...this.state.data, ...serverResponds] });
