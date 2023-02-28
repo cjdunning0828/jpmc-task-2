@@ -48,17 +48,18 @@ class App extends Component<{}, IState> {
           showGraph: true,
         });
       });
-        x++;
-        if (x > 1000) {
-          clearInterval(interval);
-        }
+      x++;
+      if (x > 1000) {
+        clearInterval(interval);
       }
-    }
+    }, 100);
+  }
+  
 
   /**
    * Render the App react component
    */
-  render() {
+  render(): any {
     return (
       <div className="App">
         <header className="App-header">
